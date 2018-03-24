@@ -11,7 +11,7 @@ import com.cmsedge.model.Employee;
 
 @Repository
 @Transactional
-public class EmployeeDaoImpl {
+public class EmployeeDaoImpl implements EmployeeDao {
 	@Autowired
 	private  SessionFactory sessionFactory;
 	protected  Session getSession() {
@@ -21,12 +21,9 @@ public class EmployeeDaoImpl {
 	public void saveEmployee() {
 		Employee employee1 = new Employee();
 		employee1.setEmployeeFirstName("Rohith1");
-		employee1.setEmployeeId("3");
+		employee1.setEmployeeId("cmsedge001");
 		employee1.setPassword("test");
-		System.out.println("get session called ..............."+getSession());
 		getSession().save(employee1);
-		
-		
+		System.out.println("data inserted successfully");
 	}
-
 }
