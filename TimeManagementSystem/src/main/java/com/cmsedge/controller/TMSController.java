@@ -16,7 +16,6 @@ public class TMSController {
 	private EmployeeDao dao;
 
 	@RequestMapping("/hello")
-	
 	public String test() {
 		LOGGER.info("index called");
 		return "index";
