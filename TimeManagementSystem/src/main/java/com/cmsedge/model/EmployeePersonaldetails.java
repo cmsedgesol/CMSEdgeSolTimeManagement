@@ -4,24 +4,49 @@ import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Employee_Pesonal_Details")
 public class EmployeePersonaldetails  {
 
+	@Id
+	@Column(name = "Employee_ID", nullable = false)
 	private String employeeId;
+	@Column(name = "Employee_Aadhar_No", nullable = false)
 	private int employeeAadharNo;
+	@Column(name = "Employee_Primary_Mobile_Number", nullable = false)
 	private int employeePrimaryMobileNumber;
+	@Column(name = "Employee_Secondary_Mobile_Number", nullable = false)
 	private Integer employeeSecondaryMobileNumber;
+	@Column(name = "Employee_Personal_Email_ID", nullable = false)
 	private String employeePersonalEmailId;
+	@Column(name = "Employee_DOB", nullable = false)
 	private Date employeeDob;
+	@Column(name = "Employee_Gende", nullable = false)
 	private String employeeGender;
+	@Column(name = "Employee_Present_Address", nullable = false)
 	private String employeePresentAddress;
+	@Column(name = "Employee_Permanent_Address", nullable = false)
 	private String employeePermenentAddress;
+	@Column(name = "Employee_Blood_Group", nullable = false)
 	private String employeeBloodGroup;
+	@Column(name = "Employee_Emergency_Contact_Name", nullable = false)
 	private String employeeEmergencyContactName;
+	@Column(name = "Employee_Emergency_Contact_Mobile_Number", nullable = false)
 	private int employeeEmergencyContactMobileNumber;
+	@Column(name = "Employee_Photo", nullable = false)
 	private byte[] employeePhoto;
+	@Column(name = "Employee_Height", nullable = false)
 	private BigDecimal employeeHeight;
+	@Column(name = "Employee_Weight", nullable = false)
 	private BigDecimal employeeWeight;
+	@Column(name = "Employee_Hobbies", nullable = false)
 	private String employeeHobbies;
+	@Column(name = "Employee_Health_Issues", nullable = false)
 	private String employeeHealthIssues;
 
 	public EmployeePersonaldetails() {
