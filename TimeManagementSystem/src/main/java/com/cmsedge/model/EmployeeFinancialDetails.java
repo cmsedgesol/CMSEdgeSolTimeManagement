@@ -1,12 +1,26 @@
 package com.cmsedge.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Employee_Financial_Details")
 public class EmployeeFinancialDetails {
 
+	@Id
+	@Column(name = "Employee_ID", nullable = false)
 	private String employeeId;
+	@Column(name = "Employee_Bank_Name", nullable = false)
 	private String employeeBankName;
+	@Column(name = "Employee_Bank_Account_Number", nullable = false)
 	private String employeeBankAccountNumber;
+	@Column(name = "Employee_Bank_Account_Name", nullable = false)
 	private String employeeBankAccountName;
+	@Column(name = "Employee_Bank_IFS_Code", nullable = false)
 	private String employeeBankIfscCode;
+	@Column(name = "Employee_PAN_Card_Number", nullable = false)
 	private String employeePancardNumber;
 
 	public EmployeeFinancialDetails() {
