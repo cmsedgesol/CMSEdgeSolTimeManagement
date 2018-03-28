@@ -1,24 +1,49 @@
 package com.cmsedge.model;
 
 import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+@Entity
+@Table(name="Employee_Professional_Details")
 public class EmployeeProfessionalDetails {
 
+	@Id
+	@Column(name = "Employee_ID", nullable = false)
 	private String employeeId;
+	@Column(name = "Employee_Date_Of_Joining", nullable = true)
 	private Date employeeDateOfJoining;
+	@Column(name = "Employee_Official_Email_ID", nullable = true)
 	private String employeeOfficialEmailId;
+	@Column(name = "Employee_Current_Designation", nullable = false)
 	private String employeeCurrentDesignation;
+	@Column(name = "Employee_Previous_Designation", nullable = true)
 	private String employeePreviousDesignation;
+	@Column(name = "Employee_Technical_Manager_Name", nullable = false)
 	private String employeeTechnicalManagerName;
+	@Column(name = "Employee_Admin_Manager_Name", nullable = true)
 	private String employeeAdminManagerName;
+	@Column(name = "Employee_Salary_Type", nullable = true)
 	private String employeeSalaryType;
+	@Column(name = "Employee_Appraisal_Cycle", nullable = true)
 	private String employeeAppraisalCycle;
+	@Column(name = "Employee_Education", nullable = false)
 	private String employeeEducation;
+	@Column(name = "Employee_Employment_Type", nullable = false)
 	private String employeeEmploymentType;
+	@Column(name = "Employee_Experience", nullable = true)
 	private String employeeExperience;
+	@Column(name = "Employee_Primary_SkillSet", nullable = false)
 	private String employeePrimarySkillSet;
+	@Column(name = "Employee_Secondary_SkillSet", nullable = true)
 	private String employeeSecondarySkillSet;
+	@Column(name = "Employee_Previous_Experience", nullable = true)
 	private String employeePreviousExperience;
+	@Column(name = "Employee_Resignation_Date", nullable = true)
 	private Date employeeResignationDate;
+	@Column(name = "Employee_Resignation_OR_Deactivation_Reason", nullable = true)
 	private String employeeResignationOrDecativationReason;
 
 	public EmployeeProfessionalDetails() {
