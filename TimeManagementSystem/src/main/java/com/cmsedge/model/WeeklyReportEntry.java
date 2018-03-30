@@ -3,26 +3,20 @@ package com.cmsedge.model;
 import java.util.List;
 
 public class WeeklyReportEntry {
-	private int weekEntryId;
-    protected List<String> userNames;
+	//private int weekEntryId;
+   // protected String userName;
     protected List<TimeEntry> weekEntryList;
-    
-	public int getWeekEntryId() {
-		return weekEntryId;
-	}
+	/*public String getUserName() {
+		return userName;
+	}*/
 	public List<TimeEntry> getWeekEntryList() {
 		return weekEntryList;
 	}
-	public void setWeekEntryId(int weekEntryId) {
-		this.weekEntryId = weekEntryId;
-	}
+	/*public void setUserName(String userName) {
+		this.userName = userName;
+	}*/
 	public void setWeekEntryList(List<TimeEntry> weekEntryList) {
 		this.weekEntryList = weekEntryList;
 	}
-	public List<String> getUserNames() {
-		return userNames;
-	}
-	public void setUserNames(List<String> userNames) {
-		this.userNames = userNames;
-	}
+    
 }

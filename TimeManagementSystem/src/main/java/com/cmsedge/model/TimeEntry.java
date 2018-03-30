@@ -1,11 +1,9 @@
 package com.cmsedge.model;
 
-import java.math.BigDecimal;
-import java.util.Date;
-
+import java.sql.Date;
+import java.sql.Time;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 @Entity
@@ -24,26 +22,28 @@ public class TimeEntry  {
     protected String taskName;
 	@Column(name = "User_Name", nullable = false)
     protected String userName;
-	@Column(name = "Date", nullable = false)
-    protected Date date;
+	@Column(name = "From_Date", nullable = false)
+    protected Date fromDate;
+	@Column(name = "To_Date", nullable = false)
+    protected Date toDate;
 	@Column(name = "Day", nullable = false)
     protected String day;
 	@Column(name = "Description", nullable = true)
     protected String description;
 	@Column(name = "Mon_Time_In_Hours", nullable = true)
-    protected BigDecimal monTimeInHours;
+    protected Time monTimeInHours;
 	@Column(name = "Tue_Time_In_Hours", nullable = true)
-    protected BigDecimal tueTimeInHours;
+    protected Time tueTimeInHours;
 	@Column(name = "Wed_Time_In_Hours", nullable = true)
-    protected BigDecimal wedTimeInHours;
+    protected Time wedTimeInHours;
 	@Column(name = "Thu_Time_In_Hours", nullable = true)
-    protected BigDecimal thuTimeInHours;
+    protected Time thuTimeInHours;
 	@Column(name = "Fri_Time_In_Hours", nullable = true)
-    protected BigDecimal friTimeInHours;
+    protected Time friTimeInHours;
 	@Column(name = "Sat_Time_In_Hours", nullable = true)
-    protected BigDecimal satTimeInHours;
+    protected Time satTimeInHours;
 	@Column(name = "Sun_Time_In_Hours", nullable = true)
-    protected BigDecimal sunTimeInHours;
+    protected Time sunTimeInHours;
 	public String getProjectName() {
 		return projectName;
 	}
@@ -52,9 +52,6 @@ public class TimeEntry  {
 	}
 	public String getUserName() {
 		return userName;
-	}
-	public Date getDate() {
-		return date;
 	}
 	public String getDay() {
 		return day;
@@ -70,9 +67,6 @@ public class TimeEntry  {
 	}
 	public void setUserName(String userName) {
 		this.userName = userName;
-	}
-	public void setDate(Date date) {
-		this.date = date;
 	}
 	public void setDay(String day) {
 		this.day = day;
@@ -98,47 +92,59 @@ public class TimeEntry  {
 	public void setWeekEntryId(int weekEntryId) {
 		this.weekEntryId = weekEntryId;
 	}
-	public BigDecimal getMonTimeInHours() {
+	public Time getMonTimeInHours() {
 		return monTimeInHours;
 	}
-	public BigDecimal getTueTimeInHours() {
+	public Time getTueTimeInHours() {
 		return tueTimeInHours;
 	}
-	public BigDecimal getWedTimeInHours() {
+	public Time getWedTimeInHours() {
 		return wedTimeInHours;
 	}
-	public BigDecimal getThuTimeInHours() {
+	public Time getThuTimeInHours() {
 		return thuTimeInHours;
 	}
-	public BigDecimal getFriTimeInHours() {
+	public Time getFriTimeInHours() {
 		return friTimeInHours;
 	}
-	public BigDecimal getSatTimeInHours() {
+	public Time getSatTimeInHours() {
 		return satTimeInHours;
 	}
-	public BigDecimal getSunTimeInHours() {
+	public Time getSunTimeInHours() {
 		return sunTimeInHours;
 	}
-	public void setMonTimeInHours(BigDecimal monTimeInHours) {
+	public void setMonTimeInHours(Time monTimeInHours) {
 		this.monTimeInHours = monTimeInHours;
 	}
-	public void setTueTimeInHours(BigDecimal tueTimeInHours) {
+	public void setTueTimeInHours(Time tueTimeInHours) {
 		this.tueTimeInHours = tueTimeInHours;
 	}
-	public void setWedTimeInHours(BigDecimal wedTimeInHours) {
+	public void setWedTimeInHours(Time wedTimeInHours) {
 		this.wedTimeInHours = wedTimeInHours;
 	}
-	public void setThuTimeInHours(BigDecimal thuTimeInHours) {
+	public void setThuTimeInHours(Time thuTimeInHours) {
 		this.thuTimeInHours = thuTimeInHours;
 	}
-	public void setFriTimeInHours(BigDecimal friTimeInHours) {
+	public void setFriTimeInHours(Time friTimeInHours) {
 		this.friTimeInHours = friTimeInHours;
 	}
-	public void setSatTimeInHours(BigDecimal satTimeInHours) {
+	public void setSatTimeInHours(Time satTimeInHours) {
 		this.satTimeInHours = satTimeInHours;
 	}
-	public void setSunTimeInHours(BigDecimal sunTimeInHours) {
+	public void setSunTimeInHours(Time sunTimeInHours) {
 		this.sunTimeInHours = sunTimeInHours;
+	}
+	public Date getFromDate() {
+		return fromDate;
+	}
+	public Date getToDate() {
+		return toDate;
+	}
+	public void setFromDate(Date fromDate) {
+		this.fromDate = fromDate;
+	}
+	public void setToDate(Date toDate) {
+		this.toDate = toDate;
 	}
     
 }

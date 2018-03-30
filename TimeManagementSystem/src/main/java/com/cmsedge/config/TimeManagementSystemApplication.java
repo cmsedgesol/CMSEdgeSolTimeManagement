@@ -39,7 +39,8 @@ public class TimeManagementSystemApplication extends WebMvcConfigurerAdapter {
 		SpringApplication.run(TimeManagementSystemApplication.class, args);
 		System.out.println("Boot Program started.....");
 	}
-	//MVC Configuration
+
+	// MVC Configuration
 	@Override
 	public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
 		configurer.enable();
@@ -52,7 +53,8 @@ public class TimeManagementSystemApplication extends WebMvcConfigurerAdapter {
 		resolver.setSuffix(".jsp");
 		return resolver;
 	}
-	//Hibernate Configuration
+
+	// Hibernate Configuration
 	@Bean
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
