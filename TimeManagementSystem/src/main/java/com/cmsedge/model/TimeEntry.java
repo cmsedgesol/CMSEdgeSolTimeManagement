@@ -17,33 +17,33 @@ public class TimeEntry  {
 	@Column(name = "Employee_ID", nullable = false)
 	private String employeeId;
 	@Column(name = "Project_Name", nullable = true)
-	protected String projectName;
+	private String projectName;
 	@Column(name = "Task_Name", nullable = false)
-    protected String taskName;
+	private String taskName;
 	@Column(name = "User_Name", nullable = false)
-    protected String userName;
+	private String userName;
 	@Column(name = "From_Date", nullable = false)
-    protected Date fromDate;
+    private Date fromDate;
 	@Column(name = "To_Date", nullable = false)
-    protected Date toDate;
+    private Date toDate;
 	@Column(name = "Day", nullable = false)
-    protected String day;
+    private String day;
 	@Column(name = "Description", nullable = true)
-    protected String description;
+    private String description;
 	@Column(name = "Mon_Time_In_Hours", nullable = true)
-    protected Time monTimeInHours;
+    private Time monTimeInHours;
 	@Column(name = "Tue_Time_In_Hours", nullable = true)
-    protected Time tueTimeInHours;
+    private Time tueTimeInHours;
 	@Column(name = "Wed_Time_In_Hours", nullable = true)
-    protected Time wedTimeInHours;
+    private Time wedTimeInHours;
 	@Column(name = "Thu_Time_In_Hours", nullable = true)
-    protected Time thuTimeInHours;
+    private Time thuTimeInHours;
 	@Column(name = "Fri_Time_In_Hours", nullable = true)
-    protected Time friTimeInHours;
+    private Time friTimeInHours;
 	@Column(name = "Sat_Time_In_Hours", nullable = true)
-    protected Time satTimeInHours;
+    private Time satTimeInHours;
 	@Column(name = "Sun_Time_In_Hours", nullable = true)
-    protected Time sunTimeInHours;
+    private Time sunTimeInHours;
 	public String getProjectName() {
 		return projectName;
 	}
@@ -146,5 +146,31 @@ public class TimeEntry  {
 	public void setToDate(Date toDate) {
 		this.toDate = toDate;
 	}
-    
+	public TimeEntry(int timeEntryId, int weekEntryId, String employeeId, String projectName, String taskName,
+			String userName, Date fromDate, Date toDate, String day, String description, Time monTimeInHours,
+			Time tueTimeInHours, Time wedTimeInHours, Time thuTimeInHours, Time friTimeInHours, Time satTimeInHours,
+			Time sunTimeInHours) {
+		super();
+		this.timeEntryId = timeEntryId;
+		this.weekEntryId = weekEntryId;
+		this.employeeId = employeeId;
+		this.projectName = projectName;
+		this.taskName = taskName;
+		this.userName = userName;
+		this.fromDate = fromDate;
+		this.toDate = toDate;
+		this.day = day;
+		this.description = description;
+		this.monTimeInHours = monTimeInHours;
+		this.tueTimeInHours = tueTimeInHours;
+		this.wedTimeInHours = wedTimeInHours;
+		this.thuTimeInHours = thuTimeInHours;
+		this.friTimeInHours = friTimeInHours;
+		this.satTimeInHours = satTimeInHours;
+		this.sunTimeInHours = sunTimeInHours;
+	}
+	public TimeEntry() {
+		super();
+		// TODO Auto-generated constructor stub
+	}   
 }
